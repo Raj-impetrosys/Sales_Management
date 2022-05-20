@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "380793104352",
+    "project_id": "sales-management-7f835",
+    "storage_bucket": "sales-management-7f835.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380793104352:android:254c0f073a95f8c4ab2d85",
+        "android_client_info": {
+          "package_name": "com.example.saletrackhing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380793104352-4ieed8b121e7ldsh9g8jqe29bh44oa5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.saletrackhing",
+            "certificate_hash": "7cd20467b17d08d22720d60c36862319b9c65bdb"
+          }
+        },
+        {
+          "client_id": "380793104352-u2lg59ul084ub4kc2b8h61745u480kgh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-cKRmR4CtbDbd7wz3bpzFae3ZRhq_imQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "380793104352-u2lg59ul084ub4kc2b8h61745u480kgh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
