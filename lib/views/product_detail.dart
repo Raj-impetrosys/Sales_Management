@@ -14,6 +14,14 @@ class ProductDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     final ProductModel product =
         ModalRoute.of(context)!.settings.arguments as ProductModel;
+    // cartBloc.stream.listen((state) {
+    //   if (state is AddedToCart) {
+    //     showFlushBar(context: context, message: 'Added  to Cart');
+    //   }
+    // });
+    // if (cartBloc.state is AddedToCart) {
+    //   showFlushBar(context: context, message: 'Added  to Cart');
+    // }
 
     _colorSelector() => Row(
           children: [

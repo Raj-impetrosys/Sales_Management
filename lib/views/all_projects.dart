@@ -36,12 +36,16 @@ class AllProjects extends StatelessWidget {
                         Navigator.of(context).pushNamed('/client_list');
                       }),
                   menuItem(
-                      image: 'shopping-cart', text: 'INVENTORY', onTap: () {}),
+                      image: 'shopping-cart',
+                      text: 'INVENTORY',
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/categories');
+                      }),
                   menuItem(
                       image: 'orders',
                       text: 'ORDERS',
                       onTap: () {
-                        Navigator.of(context).pushNamed('/categories');
+                        Navigator.of(context).pushNamed('/orders');
                       }),
                 ]),
                 TableRow(children: [

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:saletrackhing/bloc/auth_bloc/auth_event.dart';
 import 'package:saletrackhing/bloc/auth_bloc/auth_state.dart';
@@ -43,20 +44,20 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     await FirebaseAuth.instance.verifyPhoneNumber(
         phoneNumber: mobileNumber,
         verificationCompleted: (PhoneAuthCredential phoneAuthCredential) {
-          print("verification completed: ${phoneAuthCredential.smsCode}");
+          debugPrint("verification completed: ${phoneAuthCredential.smsCode}");
           emit(VerificationCompleteState(mobileNumber: mobileNumber));
           // _verificationId = phoneAuthCredential.verificationId;
         },
         verificationFailed: (FirebaseAuthException firebaseAuthException) {
-          print("error: ${firebaseAuthException.message}");
+          debugPrint("error: ${firebaseAuthException.message}");
           emit(ErrorState(error: firebaseAuthException.message!));
         },
         codeSent: (verificationId, i) {
-          print("codeSent: $verificationId $i");
+          debugPrint("codeSent: $verificationId $i");
           emit(SMSCodeSent(verificationId));
         },
         codeAutoRetrievalTimeout: (s) {
-          print("codeAutoRetrievalTimeout: $s");
+          debugPrint("codeAutoRetrievalTimeout: $s");
           emit(ErrorState(error: s));
         });
   }

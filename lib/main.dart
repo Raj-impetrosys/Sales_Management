@@ -9,6 +9,7 @@ import 'package:saletrackhing/bloc/localization_bloc/localization_state.dart';
 import 'package:saletrackhing/globals/constants.dart';
 import 'package:saletrackhing/globals/globals.dart';
 import 'package:saletrackhing/globals/widgets/loader.dart';
+import 'package:saletrackhing/views/add_new_client.dart';
 import 'package:saletrackhing/views/bottom_navigation_bar.dart';
 import 'package:saletrackhing/views/cart.dart';
 import 'package:saletrackhing/views/categories.dart';
@@ -21,7 +22,9 @@ import 'package:saletrackhing/views/dashboard.dart';
 import 'package:saletrackhing/views/follow_up.dart';
 import 'package:saletrackhing/views/login.dart';
 import 'package:saletrackhing/views/my_account.dart';
+import 'package:saletrackhing/views/my_orders.dart';
 import 'package:saletrackhing/views/notification.dart';
+import 'package:saletrackhing/views/order_details.dart';
 import 'package:saletrackhing/views/otp.dart';
 import 'package:saletrackhing/views/product_detail.dart';
 import 'package:saletrackhing/views/selected_category.dart';
@@ -74,6 +77,9 @@ class MyApp extends StatelessWidget {
                 '/cart': (BuildContext context) => const CartScreen(),
                 '/notification': (BuildContext context) =>
                     const NotificationScreen(),
+                '/orders': (BuildContext context) => const MyOrdersScreen(),
+                '/order_details': (BuildContext context) =>
+                    const OrderDetails(),
                 '/follow_up': (BuildContext context) => const FollowUp(),
                 '/categories': (BuildContext context) =>
                     const CategoriesScreen(),
@@ -85,6 +91,8 @@ class MyApp extends StatelessWidget {
                     const ProductDetail(),
                 '/client_list': (BuildContext context) =>
                     const ClientListScreen(),
+                '/add_new_client': (BuildContext context) =>
+                    const AddNewClient(),
                 '/client_details': (BuildContext context) =>
                     const ClientDetails(),
                 '/collect_payment': (BuildContext context) =>

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:saletrackhing/globals/constants.dart';
 import 'package:saletrackhing/globals/widgets/notification_btn.dart';
+import 'package:saletrackhing/globals/widgets/search_btn.dart';
+import 'package:saletrackhing/views/add_new_client.dart';
 
 class ClientListScreen extends StatelessWidget {
   const ClientListScreen({Key? key}) : super(key: key);
@@ -16,33 +18,36 @@ class ClientListScreen extends StatelessWidget {
             style: TextStyle(color: Colors.black),
           ),
           actions: [
-            Container(
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                  boxShadow: Constants.shadow,
-                  shape: BoxShape.circle,
-                  color: Colors.white),
-              child: Image.asset(
-                'assets/images/person_add.png',
-                scale: 2.5,
+            InkWell(
+              onTap: () {
+                // Navigator.of(context).pushNamed('/add_new_client');
+                showDialog(
+                  context: context,
+                  builder: (context) => const AlertDialog(
+                    contentPadding: EdgeInsets.zero,
+                    insetPadding: EdgeInsets.zero,
+                    backgroundColor: Colors.transparent,
+                    content: AddNewClient(),
+                  ),
+                );
+              },
+              child: Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                    boxShadow: Constants.shadow,
+                    shape: BoxShape.circle,
+                    color: Colors.white),
+                child: Image.asset(
+                  'assets/images/person_add.png',
+                  scale: 2.5,
+                ),
               ),
             ),
             const SizedBox(
               width: 10,
             ),
-            Container(
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                  boxShadow: Constants.shadow,
-                  shape: BoxShape.circle,
-                  color: Colors.white),
-              child: Image.asset(
-                'assets/images/search.png',
-                scale: 2.5,
-              ),
-            ),
+            searchBtn(),
             const SizedBox(
               width: 10,
             ),

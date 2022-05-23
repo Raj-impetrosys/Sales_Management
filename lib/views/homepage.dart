@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
           // Text(text),
           BlocConsumer(
               listener: (context, s) {
-                String text = 'welcome-text'.i18n();
+                // String text = 'welcome-text'.i18n();
               },
               bloc: localizationBloc,
               builder: (context, state) {

@@ -113,7 +113,7 @@ class OtpScreen extends StatelessWidget {
           bloc: _authBloc,
           listener: (context, state) {
             if (state is VerificationCompleteState) {
-              showFlushBar(message: 'Login Successfully');
+              showFlushBar(message: 'Login Successfully', context: context);
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (context) => const CustomBottomNavigationBar()));
             }

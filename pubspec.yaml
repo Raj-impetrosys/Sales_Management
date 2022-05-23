@@ -20,6 +20,8 @@ dependencies:
   flutter_flushbar: ^0.0.2
   flutter_localizations:
     sdk: flutter
+  fluttertoast: ^8.0.9
+  image_picker: ^0.8.5+3
   localization: ^2.1.0
   modal_progress_hud_nsn: ^0.1.0-nullsafety-1
   otp_text_field: ^1.1.3
